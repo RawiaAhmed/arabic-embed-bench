@@ -1,0 +1,29 @@
+[project]
+name = "arabic-embed-bench"
+version = "0.1.0"
+description = "Which embedding model retrieves the right Quran verses for Arabic and English questions"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "quran-dataset @ git+https://github.com/RawiaAhmed/quran-dataset",
+    "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+models = ["sentence-transformers>=3.0"]
+
+[project.scripts]
+arabic-embed-bench = "arabic_embed_bench.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
