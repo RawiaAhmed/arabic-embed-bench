@@ -75,4 +75,4 @@ The `quran-rag` retriever will use **bge-m3 over 3-verse windows, indexing the E
 
 1. [quran-dataset](https://github.com/RawiaAhmed/quran-dataset): data and chunking
 2. **arabic-embed-bench**: which embedding model retrieves Arabic and English best (this repo)
-3. quran-hybrid-search: BM25 + vectors
+3. [quran-hybrid-search](https://github.com/RawiaAhmed/quran-hybrid-search): does BM25 help? (measured: no)
